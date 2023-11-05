@@ -4,8 +4,20 @@
   "description": "transaction validator for parallel scheduling",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "transfer1": "node test/transfer1.js",
+    "transfer2": "node test/transfer2.js",
+    "dual": "concurrently \"npm run transfer1\" \"npm run transfer2\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
 }
